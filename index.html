@@ -1,0 +1,3315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DNAxon Biosciences — Neurogenomics AI Drug Discovery</title>
+  <meta name="description"
+    content="DNAxon is building the world's first brain-specific AI platform for neurogenomic drug discovery. Decoding the genetics of brain disease.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <style>
+    /* latin-ext */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: italic;
+      font-weight: 300;
+      font-display: swap;
+      src: url("61a47538-6f5c-4561-9aaa-711826fdc853") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: italic;
+      font-weight: 300;
+      font-display: swap;
+      src: url("e999e256-ba6d-4fbf-bd9f-fa75689e4170") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url("29bf5f68-eff6-4a1c-b5ed-b28949af4b3e") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url("0197fa90-9fc7-4989-bc02-5105ffe86ab9") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("29bf5f68-eff6-4a1c-b5ed-b28949af4b3e") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("0197fa90-9fc7-4989-bc02-5105ffe86ab9") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("29bf5f68-eff6-4a1c-b5ed-b28949af4b3e") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("0197fa90-9fc7-4989-bc02-5105ffe86ab9") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("29bf5f68-eff6-4a1c-b5ed-b28949af4b3e") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("0197fa90-9fc7-4989-bc02-5105ffe86ab9") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'DM Serif Display';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url("1aa29d07-de28-4d4f-8653-13afd59e97e2") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'DM Serif Display';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url("63cceb23-6ed8-4e36-a5e3-b42468a49c63") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'DM Serif Display';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("6983db21-eeb2-4728-987e-a030aa5efe1d") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'DM Serif Display';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("b549ae8c-7bec-473e-8902-a06686122e16") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url("938e05d5-6268-47c0-b0a8-d59e3b253182") format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+
+    /* cyrillic */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url("74f49ef3-c9ad-4abb-ba09-eca98ef6c90e") format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+
+    /* greek */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url("c01b3d49-bd41-47e9-a74d-353de9236c1a") format('woff2');
+      unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+    }
+
+    /* vietnamese */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url("c03a1b06-c024-470c-bc51-5a5c648793ec") format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url("e757368c-5014-458b-9540-8f811d03dc5b") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url("02d8170a-73ee-4e11-aad1-df761c06b234") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("938e05d5-6268-47c0-b0a8-d59e3b253182") format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+
+    /* cyrillic */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("74f49ef3-c9ad-4abb-ba09-eca98ef6c90e") format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+
+    /* greek */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("c01b3d49-bd41-47e9-a74d-353de9236c1a") format('woff2');
+      unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+    }
+
+    /* vietnamese */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("c03a1b06-c024-470c-bc51-5a5c648793ec") format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("e757368c-5014-458b-9540-8f811d03dc5b") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("02d8170a-73ee-4e11-aad1-df761c06b234") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("938e05d5-6268-47c0-b0a8-d59e3b253182") format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+
+    /* cyrillic */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("74f49ef3-c9ad-4abb-ba09-eca98ef6c90e") format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+
+    /* greek */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("c01b3d49-bd41-47e9-a74d-353de9236c1a") format('woff2');
+      unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+    }
+
+    /* vietnamese */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("c03a1b06-c024-470c-bc51-5a5c648793ec") format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("e757368c-5014-458b-9540-8f811d03dc5b") format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("02d8170a-73ee-4e11-aad1-df761c06b234") format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
+  <script src="cabcc68d-8f46-4842-b515-4e6fb750a305"></script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --acc-rgb: 0, 212, 184;
+      --acc2-rgb: 0, 170, 150;
+      --teal: #00d4b8;
+      --teal2: #00a896;
+      --teal3: #006b60;
+      --tsm: rgba(0, 212, 184, .12);
+      --tmd: rgba(0, 212, 184, .2);
+      --bg: #fcfefe;
+      --bg2: #ffffff;
+      --bg3: #f2f9f7;
+      --text: #071210;
+      --text2: #1a3530;
+      --muted: #4a7a72;
+      --muted2: #8ab5ad;
+      --bdr: rgba(0, 170, 150, .15);
+      --sh: 0 8px 40px rgba(0, 150, 130, .08);
+      --sh2: 0 20px 70px rgba(0, 150, 130, .14);
+      --fd: 'JetBrains Mono', monospace;
+      --fb: 'JetBrains Mono', monospace;
+      --fm: 'JetBrains Mono', monospace;
+      --hero-grad-top: #ffffff;
+      --bg-nav: rgba(244, 250, 248, .9);
+    }
+
+    /* ── Dark Mode ── */
+    html[data-theme="dark"] {
+      --acc-rgb: 0, 212, 184;
+      --acc2-rgb: 0, 170, 150;
+      --teal: #00d4b8;
+      --teal2: #00a896;
+      --teal3: #a4ebdc;
+      --tsm: rgba(0, 212, 184, .10);
+      --tmd: rgba(0, 212, 184, .18);
+      --bg: #071210;
+      --bg2: #0c1c19;
+      --bg3: #122824;
+      --text: #e8f5f1;
+      --text2: #c5dbd5;
+      --muted: #7a9a92;
+      --muted2: #4a6a62;
+      --bdr: rgba(0, 212, 184, .15);
+      --sh: 0 8px 40px rgba(0, 0, 0, .4);
+      --sh2: 0 20px 70px rgba(0, 0, 0, .6);
+      --hero-grad-top: #071210;
+      --bg-nav: rgba(7, 18, 16, .85);
+    }
+
+    /* ── Voice: Modernist (sans only, no italic) ── */
+    html[data-voice="modernist"] {
+      --fd: 'DM Sans', sans-serif;
+    }
+
+    html[data-voice="modernist"] .ht {
+      letter-spacing: -.028em;
+      font-weight: 500;
+    }
+
+    html[data-voice="modernist"] .ht .ac {
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    html[data-voice="modernist"] .ht .ul::after {
+      height: .32em;
+      opacity: .45;
+    }
+
+    html[data-voice="modernist"] .st {
+      letter-spacing: -.02em;
+      font-weight: 500;
+    }
+
+    html[data-voice="modernist"] .gt,
+    html[data-voice="modernist"] .pl h3,
+    html[data-voice="modernist"] .cd h3,
+    html[data-voice="modernist"] .fl,
+    html[data-voice="modernist"] .logo,
+    html[data-voice="modernist"] .sn {
+      font-weight: 500;
+      letter-spacing: -.012em;
+    }
+
+    /* ── Voice: Manuscript (mono-heavy, technical) ── */
+    html[data-voice="manuscript"] {
+      --fd: 'JetBrains Mono', monospace;
+      --fb: 'JetBrains Mono', monospace;
+    }
+
+    html[data-voice="manuscript"] body {
+      font-weight: 300;
+    }
+
+    html[data-voice="manuscript"] .ht {
+      font-size: clamp(2.1rem, 4.6vw, 4.4rem);
+      letter-spacing: -.04em;
+      font-weight: 400;
+      line-height: 1.04;
+    }
+
+    html[data-voice="manuscript"] .ht .ac {
+      font-style: normal;
+    }
+
+    html[data-voice="manuscript"] .ht .ul::after {
+      height: .16em;
+      opacity: .5;
+    }
+
+    html[data-voice="manuscript"] .st {
+      font-size: clamp(1.5rem, 2.7vw, 2.2rem);
+      letter-spacing: -.02em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    html[data-voice="manuscript"] .gt {
+      font-size: 1.35rem;
+      letter-spacing: -.01em;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    html[data-voice="manuscript"] .pl h3,
+    html[data-voice="manuscript"] .cd h3 {
+      text-transform: uppercase;
+      letter-spacing: -.01em;
+      font-weight: 500;
+      font-size: 1.05rem;
+    }
+
+    html[data-voice="manuscript"] .logo,
+    html[data-voice="manuscript"] .fl {
+      text-transform: uppercase;
+      letter-spacing: -.01em;
+      font-weight: 500;
+    }
+
+    html[data-voice="manuscript"] .sn {
+      font-size: 1.95rem;
+      font-weight: 400;
+    }
+
+    /* ── Hero Mode: Manuscript (full-bleed type, viz hidden) ── */
+    html[data-hero="manuscript"] #hero {
+      grid-template-columns: 1fr;
+    }
+
+    html[data-hero="manuscript"] .hR {
+      display: none;
+    }
+
+    html[data-hero="manuscript"] .hL {
+      padding: 9rem 7vw 9rem;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    html[data-hero="manuscript"] .ht {
+      font-size: clamp(3.6rem, 9.5vw, 10.5rem);
+    }
+
+    html[data-hero="manuscript"] .hs {
+      font-size: 1.18rem;
+      max-width: 680px;
+    }
+
+    html[data-hero="manuscript"][data-voice="manuscript"] .ht {
+      font-size: clamp(2.5rem, 6.4vw, 6.4rem);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--fb);
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* ── Cursor ── */
+    @media (pointer: coarse), (max-width: 1024px) {
+      #cur, #cr { display: none !important; }
+      * { cursor: auto !important; }
+    }
+
+    #cur,
+    #cr {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+    }
+
+    #cur {
+      width: 10px;
+      height: 10px;
+      background: var(--teal);
+      transition: width .15s, height .15s;
+      mix-blend-mode: multiply;
+    }
+
+    #cr {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid rgba(0, 212, 184, .4);
+      transition: width .2s, height .2s, opacity .2s;
+    }
+
+    html[data-theme="dark"] #cur {
+      mix-blend-mode: plus-lighter;
+    }
+
+    html[data-theme="dark"] #cr {
+      border-color: rgba(0, 212, 184, .6);
+    }
+
+    body:has(a:hover) #cur {
+      width: 16px;
+      height: 16px;
+    }
+
+    body:has(a:hover) #cr {
+      width: 48px;
+      height: 48px;
+      opacity: .5;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background .35s, box-shadow .35s;
+    }
+
+    .nav-r {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .tt {
+      background: none;
+      border: 1px solid var(--bdr);
+      color: var(--teal);
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      background: var(--bg2);
+    }
+
+    .tt:hover {
+      border-color: var(--teal);
+      background: var(--bg3);
+      transform: translateY(-2px);
+    }
+
+    .tt svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html[data-theme="dark"] .tt svg.sun { display: block; }
+    html[data-theme="dark"] .tt svg.moon { display: none; }
+    html:not([data-theme="dark"]) .tt svg.sun { display: none; }
+    html:not([data-theme="dark"]) .tt svg.moon { display: block; }
+
+    html[data-theme="dark"] .tt:hover svg {
+      transform: rotate(45deg);
+    }
+
+    nav.sol {
+      background: var(--bg-nav);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 1px 0 var(--bdr);
+    }
+
+    .logo {
+      font-family: var(--fd);
+      font-size: 2rem;
+      color: var(--text);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .15rem;
+      letter-spacing: -.04em;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .logo #logo-canvas {
+      display: block;
+      border-radius: 50%;
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .lx {
+      color: var(--teal);
+      font-weight: 600;
+    }
+
+    .ld {
+      display: none;
+    }
+
+    @keyframes pd {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(0, 212, 184, .4);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(0, 212, 184, 0);
+      }
+    }
+
+    .nl {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nl a {
+      font-family: var(--fd);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 500;
+      transition: color .2s;
+    }
+
+    .nl a:hover {
+      color: var(--teal3);
+    }
+
+    .nb {
+      padding: .48rem 1.2rem;
+      border: 1.5px solid var(--teal);
+      color: var(--teal3) !important;
+      border-radius: 3px;
+      font-size: .78rem !important;
+    }
+
+    .nb:hover {
+      background: var(--teal) !important;
+      color: #fff !important;
+    }
+
+    /* ── Hero (editorial neurogenomics) ── */
+    #hero {
+      min-height: 125vh;
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+      align-items: stretch;
+      background: var(--bg);
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 50%, rgba(var(--acc-rgb), .06), transparent 55%), linear-gradient(180deg, var(--hero-grad-top) 0%, var(--bg) 60%);
+      pointer-events: none;
+    }
+
+    .hL {
+      position: relative;
+      z-index: 3;
+      padding: 9rem 4rem 4rem 7vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hR {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: visible;
+      pointer-events: none;
+      padding-top: 7rem;
+    }
+
+    #hc {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 150vh;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hmeta {
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
+      font-family: var(--fm);
+      font-size: .62rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted2);
+      margin-bottom: 2.4rem;
+      animation: fu .8s ease both;
+    }
+
+    .hmeta .bd {
+      width: 6px;
+      height: 6px;
+      background: var(--teal);
+      border-radius: 50%;
+      animation: pd 1.5s infinite;
+      flex-shrink: 0;
+    }
+
+    .hmeta .pipe {
+      color: var(--bdr);
+    }
+
+    .hmeta strong {
+      color: var(--teal3);
+      font-weight: 500;
+      letter-spacing: .22em;
+    }
+
+    .ht {
+      font-family: var(--fd);
+      font-size: clamp(2.4rem, 5.2vw, 5rem);
+      line-height: 1.02;
+      color: var(--text);
+      margin-bottom: 1.6rem;
+      letter-spacing: -.045em;
+      font-weight: 400;
+      animation: fu .9s .12s ease both;
+      text-wrap: balance;
+    }
+
+    .ht .ln {
+      display: block;
+    }
+
+    .ht .ac {
+      color: var(--teal3);
+      font-weight: 500;
+    }
+
+    .ht .ul {
+      position: relative;
+      display: inline-block;
+    }
+
+    .ht .ul::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: .06em;
+      height: .18em;
+      background: var(--teal);
+      opacity: .3;
+      z-index: -1;
+    }
+
+    .hrule {
+      width: 54px;
+      height: 2px;
+      background: var(--teal);
+      margin: 2rem 0 1.6rem;
+      animation: fu .8s .3s ease both;
+    }
+
+    .hs {
+      font-size: 1.06rem;
+      font-weight: 300;
+      color: var(--text2);
+      line-height: 1.7;
+      margin-bottom: 2.6rem;
+      max-width: 650px;
+      animation: fu .9s .35s ease both;
+    }
+
+    .hs strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .hs em {
+      color: var(--teal3);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .ha {
+      display: flex;
+      gap: .9rem;
+      flex-wrap: wrap;
+      align-items: center;
+      animation: fu .9s .5s ease both;
+    }
+
+    .bp {
+      padding: .95rem 1.6rem;
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      font-family: var(--fb);
+      font-weight: 500;
+      font-size: .78rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: none;
+      transition: background .25s, transform .25s, letter-spacing .3s;
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+    }
+
+    .bp::after {
+      content: '→';
+      transition: transform .25s;
+    }
+
+    .bp:hover {
+      background: var(--teal3);
+      transform: translateY(-1px);
+      letter-spacing: .18em;
+    }
+
+    .bp:hover::after {
+      transform: translateX(4px);
+    }
+
+    .bg {
+      padding: .95rem 1.4rem;
+      background: transparent;
+      color: var(--text);
+      border: none;
+      font-family: var(--fb);
+      font-weight: 500;
+      font-size: .78rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: none;
+      transition: color .2s, letter-spacing .3s;
+      border-bottom: 1px solid var(--text);
+    }
+
+    .bg:hover {
+      color: var(--teal3);
+      border-color: var(--teal);
+      letter-spacing: .18em;
+    }
+
+    .hfoot {
+      position: absolute;
+      left: 7vw;
+      right: 4rem;
+      bottom: 2.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 2rem;
+      font-family: var(--fm);
+      font-size: .6rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--muted2);
+      animation: fu 1s .9s ease both;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .hfoot .col {
+      display: flex;
+      flex-direction: column;
+      gap: .35rem;
+      line-height: 1.4;
+    }
+
+    .hfoot .col .v {
+      color: var(--text2);
+      font-weight: 500;
+    }
+
+    .hfoot .col .lbl {
+      opacity: .7;
+    }
+
+    .hfoot .scr {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .55rem;
+    }
+
+    .hfoot .sl {
+      width: 1px;
+      height: 32px;
+      background: linear-gradient(var(--teal), transparent);
+      animation: sla 1.6s ease-in-out infinite;
+    }
+
+    .hcal {
+      position: absolute;
+      font-family: var(--fm);
+      font-size: .58rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text2);
+      background: rgba(255, 255, 255, .86);
+      backdrop-filter: blur(8px);
+      padding: .4rem .65rem;
+      border: 1px solid var(--bdr);
+      border-left: 2px solid var(--teal);
+      line-height: 1.5;
+      z-index: 3;
+      pointer-events: none;
+      animation: fu 1s 1.1s ease both;
+    }
+
+    .hcal .gn {
+      color: var(--teal3);
+      font-weight: 600;
+      display: block;
+      font-size: .64rem;
+    }
+
+    .hcal .v {
+      color: var(--muted);
+      font-size: .55rem;
+      letter-spacing: .14em;
+    }
+
+    .hcal.c1 {
+      top: 14%;
+      right: 6%;
+    }
+
+    .hcal.c2 {
+      top: 54%;
+      right: 38%;
+    }
+
+    .hcal.c3 {
+      bottom: 18%;
+      right: 10%;
+    }
+
+    @keyframes sla {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scaleY(1)
+      }
+
+      50% {
+        opacity: .3;
+        transform: scaleY(.5)
+      }
+    }
+
+    @keyframes fu {
+      from {
+        opacity: 0;
+        transform: translateY(26px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @media(max-width:980px) {
+      #hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hR {
+        display: none;
+      }
+
+      .hL {
+        padding: 8rem 1.5rem 7rem;
+      }
+
+      .hfoot {
+        left: 1.5rem;
+        right: 1.5rem;
+      }
+
+      .hcal {
+        display: none;
+      }
+    }
+
+    /* ── General ── */
+    section {
+      padding: 6rem 3rem;
+    }
+
+    .cnt {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .sl2 {
+      font-family: var(--fm);
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      margin-bottom: .75rem;
+    }
+
+    .sl2::before {
+      content: '';
+      width: 26px;
+      height: 1px;
+      background: var(--teal);
+    }
+
+    .st {
+      font-family: var(--fd);
+      font-size: clamp(1.5rem, 2.7vw, 2.3rem);
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 1.1rem;
+      letter-spacing: -.03em;
+      font-weight: 500;
+    }
+
+    .ss {
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.75;
+      max-width: 580px;
+    }
+
+    .rv {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .rv.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Mission ── */
+    #mission {
+      background: var(--bg);
+    }
+
+    .mg {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .mt p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .mt strong {
+      color: var(--text2);
+      font-weight: 500;
+    }
+
+    .sstrip {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--bdr);
+      flex-wrap: nowrap;
+    }
+
+    .sn {
+      font-family: var(--fd);
+      font-size: 2rem;
+      color: var(--teal);
+      line-height: 1;
+      letter-spacing: -.03em;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .snl {
+      font-size: .78rem;
+      color: var(--muted);
+      margin-top: .2rem;
+    }
+
+    #vc {
+      width: 100%;
+      height: 480px;
+    }
+
+    /* ── Pillars ── */
+    #science {
+      background: var(--bg);
+    }
+
+    .pls {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+      margin-top: 2.8rem;
+    }
+
+    .pl {
+      background: var(--bg2);
+      border: 1px solid var(--bdr);
+      border-radius: 14px;
+      padding: 2.1rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform .35s ease, box-shadow .35s ease, border-color .35s;
+      cursor: none;
+    }
+
+    .pl::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--teal), transparent);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .pl:hover {
+      transform: translateY(-7px) rotateX(2deg);
+      box-shadow: var(--sh2);
+      border-color: rgba(0, 212, 184, .28);
+    }
+
+    .pl:hover::before {
+      opacity: 1;
+    }
+
+    .pn {
+      font-family: var(--fm);
+      font-size: .66rem;
+      letter-spacing: .12em;
+      color: var(--muted2);
+      margin-bottom: 1.1rem;
+    }
+
+    .pi {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      background: var(--bg3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1.1rem;
+      border: 1px solid var(--bdr);
+    }
+
+    .pi svg {
+      width: 22px;
+      height: 22px;
+      color: var(--teal);
+    }
+
+    .pl h3 {
+      font-family: var(--fd);
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: .65rem;
+      letter-spacing: -.02em;
+      font-weight: 500;
+    }
+
+    .pl p {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.68;
+    }
+
+    /* ── Ticker ── */
+    .tw {
+      background: var(--bg3);
+      border-top: 1px solid var(--bdr);
+      border-bottom: 1px solid var(--bdr);
+      padding: .85rem 0;
+      overflow: hidden;
+    }
+
+    .tl {
+      text-align: center;
+      font-family: var(--fm);
+      font-size: .6rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: .45rem;
+    }
+
+    .tk {
+      overflow: hidden;
+    }
+
+    .ti {
+      display: inline-flex;
+      white-space: nowrap;
+      animation: tk 44s linear infinite;
+    }
+
+    .ti span {
+      font-size: .77rem;
+      color: var(--muted);
+      padding: 0 .45rem;
+    }
+
+    .ti span:hover {
+      color: var(--teal3);
+    }
+
+    .ti .sep {
+      color: var(--teal);
+      opacity: .45;
+      padding: 0;
+    }
+
+    @keyframes tk {
+      from {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* ── Comparison ── */
+    #cmp {
+      background: var(--bg);
+    }
+
+    .cw {
+      overflow-x: auto;
+      margin-top: 2.3rem;
+      border-radius: 12px;
+      border: 1px solid var(--bdr);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+    }
+
+    thead th {
+      background: var(--bg3);
+      padding: .9rem 1.1rem;
+      font-family: var(--fm);
+      font-size: .68rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--teal3);
+      text-align: left;
+      border-bottom: 1px solid var(--bdr);
+      font-weight: 500;
+    }
+
+    tbody td {
+      padding: .85rem 1.1rem;
+      font-size: .88rem;
+      color: var(--muted);
+      border-bottom: 1px solid rgba(0, 170, 150, .06);
+      vertical-align: middle;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr.hl {
+      background: rgba(0, 212, 184, .05);
+    }
+
+    tbody tr.hl td {
+      color: var(--text2);
+      font-weight: 500;
+    }
+
+    tbody tr.hl td:first-child {
+      color: var(--teal3);
+      font-weight: 700;
+    }
+
+    tbody tr:hover {
+      background: rgba(0, 212, 184, .03);
+    }
+
+    .y {
+      color: #00a896;
+      font-weight: 600;
+    }
+
+    .n {
+      color: #b0c8c4;
+    }
+
+    .p {
+      color: #78aaa2;
+      font-style: italic;
+    }
+
+    /* ── Gene section ── */
+    #gs {
+      background: var(--bg);
+      border-top: 1px solid var(--bdr);
+      border-bottom: 1px solid var(--bdr);
+      padding: 3.8rem 3rem;
+    }
+
+    .gs-grid {
+      display: grid;
+      grid-template-columns: 38% 62%;
+      gap: 3rem;
+      align-items: start;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .gs-left {
+      text-align: left;
+    }
+
+    .gs-left .gt {
+      font-family: var(--fd);
+      font-size: 1.8rem;
+      color: var(--text);
+      margin-bottom: 1rem;
+      letter-spacing: -.025em;
+      font-weight: 500;
+    }
+
+    .gs-left .gb {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .term {
+      background: var(--bg2);
+      border-radius: 10px;
+      border: 1px solid var(--bdr);
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+      font-family: var(--fm);
+      font-size: 0.82rem;
+      color: var(--text);
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .term-head {
+      background: var(--bg3);
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--bdr);
+    }
+
+    .term-head .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+
+    .d-r {
+      background: #ff5f56;
+    }
+
+    .d-y {
+      background: #ffbd2e;
+    }
+
+    .d-g {
+      background: #27c93f;
+    }
+
+    .term-title {
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .term-body {
+      padding: 1.6rem 1.8rem;
+      flex: 1;
+      overflow-y: auto;
+      line-height: 1.75;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 212, 184, .2) transparent;
+    }
+
+    .term-body p {
+      margin-bottom: 0.2rem;
+    }
+
+    .t-pmt {
+      color: var(--teal);
+      margin-right: 0.5rem;
+      font-weight: 600;
+    }
+
+    .t-cmd {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .t-ans {
+      color: var(--muted);
+      display: block;
+      margin-top: 0.35rem;
+      margin-bottom: 1.4rem;
+      line-height: 1.8;
+      padding-left: 0.8rem;
+      border-left: 2px solid rgba(0, 212, 184, .18);
+    }
+
+    .t-blink {
+      animation: tb 1s step-end infinite;
+      color: var(--teal);
+    }
+
+    @keyframes tb {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media(max-width: 800px) {
+      .gs-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .gs-left {
+        text-align: center;
+      }
+
+      .term {
+        height: 400px;
+      }
+    }
+
+    .gs-left {
+      text-align: center;
+    }
+    }
+
+    /* ── Involve ── */
+    #inv {
+      background: var(--bg);
+    }
+
+    .cds {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.3rem;
+      margin-top: 2.3rem;
+    }
+
+    .cd {
+      background: var(--bg2);
+      border: 1px solid var(--bdr);
+      border-radius: 13px;
+      padding: 1.9rem;
+      text-decoration: none;
+      color: inherit;
+      cursor: none;
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s;
+    }
+
+    .cd::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--teal), var(--teal2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+
+    .cd:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--sh2);
+      border-color: rgba(0, 212, 184, .22);
+    }
+
+    .cd:hover::after {
+      transform: scaleX(1);
+    }
+
+    .ci {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--bg3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      border: 1px solid var(--bdr);
+    }
+
+    .ci svg {
+      width: 22px;
+      height: 22px;
+      color: var(--teal);
+    }
+
+    .cd h3 {
+      font-family: var(--fd);
+      font-size: 1.05rem;
+      color: var(--text);
+      letter-spacing: -.02em;
+      font-weight: 500;
+    }
+
+    .cd p {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.63;
+      flex: 1;
+    }
+
+    .ca {
+      color: var(--teal);
+      font-size: 1.1rem;
+      align-self: flex-start;
+      transition: transform .2s;
+    }
+
+    .cd:hover .ca {
+      transform: translateX(5px);
+    }
+
+    /* ── Contact ── */
+    #ct {
+      background: var(--bg);
+    }
+
+    .cti {
+      max-width: 620px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cti p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin-bottom: 2rem;
+      line-height: 1.72;
+    }
+
+    .eb {
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+      padding: .95rem 2rem;
+      background: var(--bg3);
+      border: 1.5px solid var(--bdr);
+      border-radius: 4px;
+      color: var(--teal3);
+      font-weight: 600;
+      font-size: .98rem;
+      text-decoration: none;
+      cursor: none;
+      transition: background .2s, border-color .2s, transform .2s, color .2s;
+    }
+
+    .eb:hover {
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(0, 212, 184, .28);
+    }
+
+    .cm {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2.2rem;
+      color: var(--muted2);
+      font-size: .8rem;
+    }
+
+    .cm a {
+      color: var(--muted2);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .cm a:hover {
+      color: var(--teal3);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--bdr);
+      padding: 1.7rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .fl {
+      font-family: var(--fd);
+      font-size: 1rem;
+      color: var(--text);
+      letter-spacing: -.02em;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .fl span {
+      color: var(--teal);
+      font-weight: 600;
+    }
+
+    footer p {
+      font-size: .76rem;
+      color: var(--muted2);
+    }
+
+    /* ── Responsive ── */
+    @media(max-width:768px) {
+      nav {
+        padding: 0.8rem 1.2rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .logo #logo-canvas {
+        width: 32px;
+        height: 32px;
+      }
+
+      .nl {
+        display: none;
+      }
+
+      .nav-r {
+        gap: 0.8rem;
+      }
+
+      .tt {
+        width: 36px;
+        height: 36px;
+      }
+
+      .ht {
+        font-size: 2.8rem;
+        line-height: 1.1;
+      }
+
+      section {
+        padding: 4rem 1.2rem;
+      }
+
+      .mg,
+      .pls,
+      .cds {
+        grid-template-columns: 1fr;
+      }
+
+      .sstrip {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+
+      .hcnt {
+        margin-left: 0;
+        padding: 0 1.2rem;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+
+  <div id="cur"></div>
+  <div id="cr"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#" class="logo">
+      <canvas id="logo-canvas" width="44" height="44"></canvas>
+      <span>DNA<span class="lx">x</span>on</span>
+    </a>
+    <div class="nav-r">
+      <ul class="nl">
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#science">Science</a></li>
+        <li><a href="#cmp">Platform</a></li>
+        <li><a href="#inv">Partners</a></li>
+        <li><a href="#ct" class="nb">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="tt" title="Toggle Theme" aria-label="Toggle Theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hL">
+      <div class="hmeta">
+        <span class="bd"></span>
+        <span>
+        </span>
+        <span class="pipe">·</span>
+        <span>
+        </span>
+      </div>
+      <h1 class="ht">
+        <span class="ln">The future of</span>
+        <span class="ln"><span class="ac">CNS drug discovery is</span></span>
+        <span class="ln"><span class="ul">Spatial.</span></span>
+        <!--<span class="ln">We built the AI to read them</span>-->
+      </h1>
+      <div class="hrule"></div>
+      <p class="hs" align="justify">Conventional drug testing treats the brain as a uniform system, ignoring its
+        distinct cellular
+        neighborhoods, spatial architectures, and localized disease signatures.
+        DNAxon integrates single-cell and spatial transcriptomics to build the world's first spatial AI for
+        neuropharmacology.
+        By simulating how drugs interact with human brain tissue at the single-cell level, we forecast clinical
+        efficacy, map off-target toxicity, and pinpoint responder subgroups years before a trial begins.</p>
+      <div class="ha">
+        <a href="#inv" class="bp"> Partner with Us</a>
+        <a href="#mission" class="bg">Read the Mission</a>
+      </div>
+    </div>
+    <canvas id="hc"></canvas>
+    <div class="hR"></div>
+  </section>
+
+  <!-- MISSION -->
+  <section id="mission">
+    <div class="cnt">
+      <div class="mg">
+        <div class="mt rv">
+          <div class="sl2">Mission</div>
+          <h2 class="st">Equipping the next era of neuropharmacology</h2>
+          <p>Developing CNS therapies is one of the most complex challenges in modern medicine, historically limited by
+            the inability to track drug interactions within the brain's physical architecture. Our mission is to equip
+            researchers with the missing layer of spatial intelligence. By illuminating the exact cellular coordinates
+            of disease, we empower R&D teams to validate targets, predict safety, and advance clinical pipelines with
+            unprecedented visibility and confidence.</p>
+          <p><strong>What traditionally takes over a decade of trial and error can now be mapped and de-risked in a
+              fraction of the time.</strong></p>
+
+          <div class="sstrip">
+            <div>
+              <div class="sn">92%</div>
+              <div class="snl">of drugs passing animal tests fail in human trials<br><span
+                  style="font-size:.68rem;color:var(--muted2)">Marshall et al., Altern Lab Anim 2023</span></div>
+            </div>
+            <div>
+              <div class="sn">12.5 Yrs</div>
+              <div class="snl">average time to bring one drug to market<br><span
+                  style="font-size:.68rem;color:var(--muted2)">Roberts R., JACC 2018</span></div>
+            </div>
+            <div>
+              <div class="sn">3.4B</div>
+              <div class="snl">people globally living with a neurological condition<br><span
+                  style="font-size:.68rem;color:var(--muted2)">The Lancet Neurology 2024</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="rv" style="transition-delay:.18s">
+          <canvas id="vc"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCIENCE -->
+  <section id="science">
+    <div class="cnt">
+      <div class="rv">
+        <div class="sl2">Our Science</div>
+        <h2 class="st">Three pillars of discovery</h2>
+      </div>
+      <div class="pls">
+        <div class="pl rv" style="transition-delay:.08s">
+          <div class="pn">01 / Neurogenomics</div>
+          <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round">
+              <path
+                d="M10 3c0 2.2-1.8 4-4 4s-4-1.8-4-4M14 21c0-2.2 1.8-4 4-4s4 1.8 4 4M18 7c0 2.2-1.8 4-4 4s-4-1.8-4-4M6 17c0-2.2 1.8-4 4-4s4 1.8 4 4M14 7l-8 10M6 7l8 10" />
+            </svg></div>
+          <h3>Neurogenomics Foundation Model</h3>
+          <p align="justify">A foundation model trained on human brain genomic data from CELLxGENE, the Human Cell Atlas
+            and ROSMAP —
+            learning the shared and divergent genetic signatures of neurological disease across cell types, cohorts and
+            disease states simultaneously.</p>
+        </div>
+        <div class="pl rv" style="transition-delay:.18s">
+          <div class="pn">02 / Spatial Biology</div>
+          <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M3 15h18M9 3v18M15 3v18" />
+              <circle cx="15" cy="9" r="1.5" fill="currentColor" stroke="none" />
+            </svg></div>
+          <h3>Spatial Circuit Engine</h3>
+          <p align="justify">Maps gene expression across brain regions and cellular neighbourhoods by integrating
+            single-cell RNA-seq
+            with spatial transcriptomics data from Atera, Visium, Xenium, GeoMX, CosMx and MERFISH — capturing how drug
+            targets behave within the spatial architecture of intact human neural tissue. As volumetric spatial methods
+            mature, DNAxon is designed to incorporate 3D resolution.
+
+          </p>
+        </div>
+        <div class="pl rv" style="transition-delay:.28s">
+          <div class="pn">03 / AI Drug Response</div>
+          <div class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round">
+              <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3-4-3-6.5c0 2.5-1 4.9-3 6.5s-3 3.5-3 5.5a7 7 0 0 0 7 7z" />
+              <circle cx="12" cy="15" r="2" fill="currentColor" stroke="none" />
+            </svg></div>
+          <h3>Drug Prediction API</h3>
+          <p align="justify">A drug prediction layer built exclusively for CNS assets — simulating drug interactions at
+            the single-cell
+            level to forecast blood-brain barrier penetrance, cell-type specific binding and off-target neurotoxicity
+            across genetically distinct patient subgroups, translating spatial biology into drug development decisions
+            before clinical trials begin.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="tw">
+    <div class="tl">MAPPING THE SPATIAL ARCHITECTURE OF NEURODEGENERATIVE DISEASE</div>
+    <div class="tk">
+      <div class="ti" id="ti"></div>
+    </div>
+  </div>
+
+  <!-- COMPARISON -->
+  <section id="cmp">
+    <div class="cnt">
+      <div class="rv">
+        <div class="sl2">Competitive Landscape</div>
+        <h2 class="st">Where brain and spatial meet drug discovery</h2>
+        <p class="ss">Most platforms in this space address one or two of these dimensions. Few address the brain
+          specifically. Fewer still combine spatial resolution with drug response prediction. The table below reflects
+          the current landscape as understood from published sources and public company information.</p>
+      </div>
+      <div class="cw rv" style="transition-delay:.15s">
+        <table>
+          <thead>
+            <tr>
+              <th>Company / Model</th>
+              <th>Brain-Specific</th>
+              <th>Spatial</th>
+              <th>Drug Discovery</th>
+              <th>Status</th>
+              <th>Data Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Recursion</td>
+              <td class="n">✗ Multi-disease</td>
+              <td class="n">✗ No spatial</td>
+              <td class="y">✓</td>
+              <td class="y">Nasdaq: RXRX</td>
+              <td class="p">Cell imaging</td>
+            </tr>
+            <tr>
+              <td>Isomorphic Labs</td>
+              <td class="n">✗ All targets</td>
+              <td class="n">✗ No spatial</td>
+              <td class="y">✓</td>
+              <td class="y">$2.1B Series B</td>
+              <td class="n">Molecular</td>
+            </tr>
+            <tr>
+              <td>Aitia</td>
+              <td class="p">Partial (neuro + oncology)</td>
+              <td class="n">✗ No spatial</td>
+              <td class="y">✓</td>
+              <td class="y">$65M raised</td>
+              <td class="p">Multi-omic</td>
+            </tr>
+            <tr>
+              <td>BrainStorm Therapeutics</td>
+              <td class="y">✓ Brain</td>
+              <td class="n">✗ No spatial</td>
+              <td class="y">✓</td>
+              <td class="y">Early stage</td>
+              <td class="p">scRNA + organoid</td>
+            </tr>
+            <tr>
+              <td>scGPT-spatial</td>
+              <td class="n">✗ All tissues</td>
+              <td class="y">✓</td>
+              <td class="n">✗</td>
+              <td class="n">Academic preprint</td>
+              <td class="p">Limited</td>
+            </tr>
+            <tr>
+              <td>Nicheformer</td>
+              <td class="n">✗ 73 organs</td>
+              <td class="y">✓</td>
+              <td class="n">✗</td>
+              <td class="n">Nature Methods 2025</td>
+              <td class="p">Multi-tissue</td>
+            </tr>
+            <tr>
+              <td>BrainBeacon</td>
+              <td class="y">✓ Brain</td>
+              <td class="y">✓</td>
+              <td class="n">✗</td>
+              <td class="n">bioRxiv preprint 2025</td>
+              <td class="p">Cross-species</td>
+            </tr>
+            <tr>
+              <td>CellType</td>
+              <td class="n">✗ All biology</td>
+              <td class="n">✗ No spatial</td>
+              <td class="y">✓</td>
+              <td class="y">YC W26 · Founded 2025</td>
+              <td class="p">scRNA only</td>
+            </tr>
+            <tr class="hl">
+              <td>DNAxon ★</td>
+              <td class="y">✓ Brain-dedicated</td>
+              <td class="y">✓ Spatial scRNA</td>
+              <td class="y">✓ Drug response</td>
+              <td class="p">Concept stage</td>
+              <td class="y">✓ Public datasets</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  <!-- GENE -->
+  <div id="gs">
+    <div class="gs-grid rv">
+      <div class="gs-left">
+        <h3 class="gt">Built on the world's brain genomic data</h3>
+        <p class="gb">UK Biobank · Allen Brain Atlas · GTEx Brain · ADNI · ROSMAP · PsychENCODE · AMP-AD · PPMI · Human
+          Cell Atlas · NDKP Portal</p>
+      </div>
+      <div class="gs-right">
+        <div class="term">
+          <div class="term-head">
+            <span class="dot d-r"></span>
+            <span class="dot d-y"></span>
+            <span class="dot d-g"></span>
+            <span class="term-title">(concept) dnaxon-ai-cli</span>
+          </div>
+          <div class="term-body" id="tbd"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INVOLVE -->
+  <section id="inv">
+    <div class="cnt">
+      <div class="rv">
+        <div class="sl2">Partnerships and Collaboration</div>
+        <h2 class="st">Rewrite the Architecture of CNS Drug Discovery</h2>
+        <p class="ss">DNAxon is at the concept and pre-incorporation stage. We are seeking scientific collaborators,
+          advisors and early partners who want to work on one of the hardest unsolved problems in medicine — predicting
+          how drugs behave in the human brain at single-cell spatial resolution before a single patient is dosed.</p>
+      </div>
+      <div class="cds">
+        <a href="/cdn-cgi/l/email-protection#543c3138383b14303a352c3b3a7a373b396b2721363e3137206907373d313a203d323d3774173b383835363b2635203d3b3a"
+          class="cd rv" style="transition-delay:.08s">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <path
+                d="M6 18h8M3 22h18M14 22a7 7 0 1 0 0-14h-1M9 14h2M9 12a2 2 0 1 1-2-2V6h6v4a2 2 0 1 1-2 2ZM12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
+            </svg></div>
+          <h3>Scientific Collaborators</h3>
+          <p>Neuroscientists, bioinformaticians, clinicians, computational biologists, computer scientists,
+            biostatisticians and mathematicians who want to contribute to building a spatially-resolved neurogenomics AI
+            platform at the earliest stage.</p>
+          <div class="ca">→</div>
+        </a>
+        <a href="/cdn-cgi/l/email-protection#5139343d3d3e11353f30293e3f7f323e3c6e2224333b3432256c10352738223e232871033e3d34"
+          class="cd rv" style="transition-delay:.16s">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <path
+                d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A5 5 0 0 0 8 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5M9 18h6M10 22h4" />
+            </svg></div>
+          <h3>Scientific Advisors</h3>
+          <p>Pharma R&amp;D veterans, academic directors, and industry leaders who can guide scientific strategy and
+            open pharma doors. Advisory equity available.</p>
+          <div class="ca">→</div>
+        </a>
+        <a href="/cdn-cgi/l/email-protection#355d5059595a75515b544d5a5b1b565a580a4640575f50564108635a59405b41505047"
+          class="cd rv" style="transition-delay:.24s">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <path d="m11 17 2 2 6-6M9 9l2 2 6-6M22 12A10 10 0 1 1 12 2a10 10 0 0 1 10 10Z" />
+            </svg></div>
+          <h3>Community and Science Partners</h3>
+          <p>Research coordinators, patient advocates, science communicators and academic partners who want to support
+            the translation of spatial neurogenomics research into a clinical reality.</p>
+          <div class="ca">→</div>
+        </a>
+        <a href="/cdn-cgi/l/email-protection#4a222f2626250a2e242b3225246429252775393f28202f293e7703243c2f393e272f243e6a03243e2f382f393e"
+          class="cd rv" style="transition-delay:.32s">
+          <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg></div>
+          <h3>Early Investors</h3>
+          <p>Angels, impact investors and early-stage biotech funds who believe the next advance in neurodegeneration
+            will come from spatially-resolved AI genomics — and want to be involved at the earliest stage.</p>
+          <div class="ca">→</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="ct">
+    <div class="cnt">
+      <div class="cti rv">
+        <div class="sl2" style="justify-content:center">Contact</div>
+        <h2 class="st">If this mission resonates,<br>we want to hear from you</h2>
+        <p>The most important conversations happen at the earliest stage.</p>
+        <a href="/cdn-cgi/l/email-protection#f69e939a9a99b69298978e9998d895999b" class="eb">✉ <span class="__cf_email__"
+            data-cfemail="2c44494040436c48424d544342024f4341">[email&#160;protected]</span></a>
+        <div class="cm">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px; vertical-align: middle;">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>St. John's, NL, Canada</span>
+          <a href="https://dnaxon.com"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="margin-right:4px; vertical-align: middle;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>dnaxon.com</a>
+          <a href="https://dnaxon.ca"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--teal)"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              style="margin-right:4px; vertical-align: middle;">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+              </path>
+            </svg>dnaxon.ca</a>
+          <a href="https://www.linkedin.com/company/dnaxon" target="_blank"><svg width="14" height="14"
+              viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" style="margin-right:4px; vertical-align: middle;">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fl">DNA<span>x</span>on Biosciences</div>
+    <!--<p style="font-size:.8rem;color:var(--muted);font-style:italic">Neurogenomics · Biomarker Discovery ·
+      Neurodegenerative Disease</p>-->
+    <p>© 2026 DNAxon Biosciences. All rights reserved.</p>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+
+    /* ── Typewriter Effect ── */
+    const ht = document.querySelector('.ht');
+    if (ht) {
+      const walker = document.createTreeWalker(ht, NodeFilter.SHOW_TEXT, null, false);
+      const textNodes = [];
+      let n; while (n = walker.nextNode()) textNodes.push(n);
+      textNodes.forEach(node => {
+        const text = node.nodeValue;
+        if (!text.trim()) return;
+        const fragment = document.createDocumentFragment();
+        for (let i = 0; i < text.length; i++) {
+          const span = document.createElement('span');
+          span.textContent = text[i];
+          span.style.opacity = '0';
+          span.style.transition = 'opacity 0.02s';
+          fragment.appendChild(span);
+        }
+        node.parentNode.replaceChild(fragment, node);
+      });
+
+      let delay = 400; // start after 400ms
+      ht.querySelectorAll('span[style*="opacity"]').forEach((span, i) => {
+        setTimeout(() => { span.style.opacity = '1'; }, delay + i * 35);
+      });
+    }
+
+    /* ── Cursor ── */
+    const cur = document.getElementById('cur'), cr = document.getElementById('cr');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    (function ac() {
+      cur.style.left = mx + 'px'; cur.style.top = my + 'px';
+      rx += (mx - rx) * .11; ry += (my - ry) * .11;
+      cr.style.left = rx + 'px'; cr.style.top = ry + 'px';
+      requestAnimationFrame(ac);
+    })();
+
+    /* ── Nav ── */
+    window.addEventListener('scroll', () => { document.getElementById('nav').classList.toggle('sol', scrollY > 60); });
+
+    /* ── Reveal ── */
+    const obs = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }); }, { threshold: .1 });
+    document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+    /* ── Ticker ── */
+    const ds = [
+      'Alzheimer\'s Disease',
+      'Parkinson\'s Disease',
+      'ALS',
+      'Glioblastoma',
+      'Multiple Sclerosis',
+      'Frontotemporal Dementia',
+      'Huntington\'s Disease',
+      'Lewy Body Dementia',
+      'Prion Disease'
+    ];
+    const ti = document.getElementById('ti');
+    [...ds, ...ds].forEach((d, i) => { if (i > 0) { const s = document.createElement('span'); s.className = 'sep'; s.textContent = '·'; ti.appendChild(s); } const sp = document.createElement('span'); sp.textContent = d; ti.appendChild(sp); });
+
+    /* ── Terminal AI Typing Demo ── */
+    const tbd = document.getElementById('tbd');
+    if (tbd) {
+      const cmds = [
+        {
+          c: 'dnaxon run --compound "Compound-AX7" --indication "Parkinson\'s disease" --model DNAxon-v0',
+          a: '[Blood-Brain Barrier Permeability]\nPredicted CNS penetrance: HIGH\nLogBB estimate: +0.34 · MW: 312 Da · cLogP: 2.1\nP-gp efflux substrate: No · BCRP substrate: Low risk\nEstimated CNS exposure: 28% of plasma concentration'
+        },
+        {
+          c: 'dnaxon target-binding --compound "Compound-AX7" --cell-types dopaminergic,astrocyte,microglia',
+          a: '[Cell-Type Specific Target Binding]\nPrimary target: LRRK2 kinase domain\n  └ Dopaminergic neurons (SN pars compacta): HIGH affinity · pKi 8.6\n  └ Astrocytes: MODERATE affinity · pKi 6.2\nOff-target detected: CK1δ/ε kinase family · Cholinergic interneurons · pKi 5.4\n[Warning] CK1 off-target activity may affect circadian rhythm pathways — flagged for review'
+        },
+        {
+          c: 'dnaxon spatial-context --compound "Compound-AX7" --region "substantia nigra"',
+          a: '[Spatial Cell Communication]\nSpatial ref: Substantia nigra pars compacta · Ventrolateral cluster VL-04\nCell-to-cell SNCA propagation: dopaminergic neurons → neighbouring astrocytes\nDisease-associated microglia enrichment: +62% in VL-04 vs adjacent regions\n[Finding] Drug effect spatially confined to VL-04 — not detectable in bulk tissue analysis\nNeighbouring cell type risk: Oligodendrocyte precursors within 50μm radius'
+        },
+        {
+          c: 'dnaxon gene-perturbation --compound "Compound-AX7" --target LRRK2 --pathway alpha-synuclein',
+          a: '[Gene Interaction and Perturbation]\nPrimary perturbation: LRRK2 inhibition → SNCA aggregation rate ↓ 31%\nDownstream gene network:\n  └ PINK1 expression: ↑ 18% (neuroprotective)\n  └ PARK7 (DJ-1): ↑ 12% (oxidative stress response)\n  └ GBA expression: ↓ 8% — [Monitor] lysosomal pathway\n14 co-expressed genes perturbed · 3 flagged for off-target review'
+        },
+        {
+          c: 'dnaxon stratify --compound "Compound-AX7" --cohort PPMI --variant LRRK2-G2019S',
+          a: '[Patient Stratification]\nCohort: PPMI · n = 1,400 participants\nPredicted responders: LRRK2 G2019S carrier subgroup — genetically enriched trial design recommended\nNon-responders: Idiopathic PD subgroup — distinct pathway architecture detected\nSpatial biomarker: VL-04 DAM enrichment score > 0.62 — independent predictor of response\n[Recommendation] Enrich Phase 2 trial enrolment for LRRK2 G2019S carriers\n[Output] Full prediction report · Spatial maps · Gene network visualisation — ready for export'
+        }
+      ];
+      let cIdx = 0;
+
+      function typeTerminal() {
+        if (cIdx >= cmds.length) {
+          setTimeout(() => { tbd.innerHTML = ''; cIdx = 0; typeTerminal(); }, 6000);
+          return;
+        }
+
+        const line = document.createElement('p');
+        const pmt = document.createElement('span'); pmt.className = 't-pmt'; pmt.textContent = '>';
+        const cmdSpan = document.createElement('span'); cmdSpan.className = 't-cmd';
+        const cur = document.createElement('span'); cur.className = 't-blink'; cur.textContent = '█';
+
+        line.appendChild(pmt); line.appendChild(cmdSpan); line.appendChild(cur);
+        tbd.appendChild(line);
+
+        const txt = cmds[cIdx].c;
+        let cChar = 0;
+
+        function typeChar() {
+          if (cChar < txt.length) {
+            cmdSpan.textContent += txt[cChar];
+            cChar++;
+            setTimeout(typeChar, Math.random() * 40 + 20);
+          } else {
+            line.removeChild(cur);
+            setTimeout(() => {
+              const ans = document.createElement('span'); ans.className = 't-ans';
+              ans.innerText = cmds[cIdx].a;
+              tbd.appendChild(ans);
+              tbd.scrollTop = tbd.scrollHeight;
+              cIdx++;
+              setTimeout(typeTerminal, 1500);
+            }, 400);
+          }
+          tbd.scrollTop = tbd.scrollHeight;
+        }
+        setTimeout(typeChar, 500);
+      }
+
+      const obsTerm = new IntersectionObserver(es => {
+        if (es[0].isIntersecting) { typeTerminal(); obsTerm.disconnect(); }
+      }, { threshold: 0.5 });
+      obsTerm.observe(tbd);
+    }
+
+    /* ══════════════════════════════════════════
+       HERO — DYNAMIC NEURON (canvas 2D)
+       Soma w/ nucleus + DNA helix · radiating dendrites
+       w/ moving signals · myelinated axon · synaptic
+       terminals · cytoskeletal microtubules. Living.
+    ══════════════════════════════════════════ */
+    (function () {
+      const cnv = document.getElementById('hc');
+      if (!cnv) return;
+      const ctx = cnv.getContext('2d');
+      let W = 0, H = 0, DPR = Math.min(devicePixelRatio || 1, 2);
+      let isVisible = false;
+
+      const obs = new IntersectionObserver(entries => {
+        isVisible = entries[0].isIntersecting;
+        if (isVisible) draw();
+      }, { threshold: 0.05 });
+      obs.observe(cnv);
+
+      function rsz() {
+        const r = cnv.getBoundingClientRect();
+        W = Math.max(320, r.width); H = Math.max(320, r.height);
+        cnv.width = W * DPR; cnv.height = H * DPR;
+        ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+      }
+      rsz(); window.addEventListener('resize', rsz);
+
+      // Deterministic noise
+      function rand(s) { let x = Math.sin(s) * 43758.5453; return x - Math.floor(x); }
+
+      // Build a fractal dendrite tree (recursive)
+      // each node: {x,y, x2,y2 (control), len, ang, depth, children:[]}
+      function buildBranch(x, y, ang, len, depth, seed, out) {
+        const dx = Math.cos(ang) * len, dy = Math.sin(ang) * len;
+        const ex = x + dx, ey = y + dy;
+        // control point: bend a bit
+        const bend = (rand(seed * 7.1) - 0.5) * 0.6;
+        const cx = x + Math.cos(ang + bend) * len * 0.55;
+        const cy = y + Math.sin(ang + bend) * len * 0.55;
+        out.push({ x1: x, y1: y, cx, cy, x2: ex, y2: ey, depth, seed, len });
+        if (depth > 0 && len > 14) {
+          const branches = 2;
+          for (let i = 0; i < branches; i++) {
+            const spread = 0.55 + rand(seed + i) * 0.4;
+            const na = ang + (i ? spread : -spread) + (rand(seed + i * 3) - 0.5) * 0.2;
+            const nl = len * (0.62 + rand(seed + i * 5) * 0.12);
+            buildBranch(ex, ey, na, nl, depth - 1, seed * 1.7 + i * 11 + 3, out);
+          }
+        }
+        return ex;
+      }
+
+      // Irregular soma outline (top of composition); peaks emit dendrites UP/OUT
+      // Canvas y is DOWN — negative y = upward.
+      // Place peaks on the upper hemisphere (angles roughly -PI..0), keep the
+      // lower hemisphere smoother where the axon descends.
+      const SOMA_R = 46;
+      const SOMA_ANCHORS = [
+        { a: -2.95, r: 1.05, peak: true },   // upper-left, mid
+        { a: -2.55, r: 1.22, peak: true },   // upper-left, longer
+        { a: -2.15, r: 1.30, peak: true },   // upper-left, longest
+        { a: -1.78, r: 1.35, peak: true },   // top-left
+        { a: -1.45, r: 1.30, peak: true },   // top
+        { a: -1.10, r: 1.32, peak: true },   // top-right longest
+        { a: -0.72, r: 1.22, peak: true },   // upper-right
+        { a: -0.32, r: 1.06, peak: true },   // right shoulder
+        { a: 0.05, r: 0.98, peak: false },  // right side smooth
+        { a: 0.50, r: 1.00, peak: false },  // lower-right smooth
+        { a: 1.05, r: 1.00, peak: false },  // axon hillock area (smooth)
+        { a: 1.55, r: 1.00, peak: false },  // bottom (axon emerges)
+        { a: 2.05, r: 1.00, peak: false },  // lower-left smooth
+        { a: 2.55, r: 0.98, peak: false },  // left side smooth
+        { a: 3.00, r: 1.04, peak: true }    // tiny side dendrite
+      ];
+      const SOMA_PATH = SOMA_ANCHORS.map(a => ({ x: Math.cos(a.a) * SOMA_R * a.r, y: Math.sin(a.a) * SOMA_R * a.r, peak: a.peak, ang: a.a }));
+      const DENDRITES = [];
+      SOMA_PATH.forEach((p, i) => {
+        if (!p.peak) return;
+        // upness: +1 means pointing straight up; we WANT upward dendrites,
+        // but cap them so they don't reach the nav bar.
+        const upness = -Math.sin(p.ang); // 1=up, -1=down
+        const baseLen = 82 + rand(i * 3.1) * 38;
+        // Upward dendrites are slightly shorter so they don't hit the nav.
+        const len = baseLen * (1 - Math.max(0, upness) * 0.18);
+        const branch = [];
+        buildBranch(p.x, p.y, p.ang, len, 3, i * 7 + 11, branch);
+        DENDRITES.push({ ang: p.ang, segs: branch, root: { x: p.x, y: p.y } });
+      });
+
+      // ─ AXON — descends VERTICALLY from bottom of soma to a terminal arbor.
+      //   Built with discrete myelin segments separated by short Nodes of Ranvier.
+      const AXON_LEN = 240;        // total vertical length
+      const AXON_START_Y = SOMA_R * 0.95;  // emerges just below soma
+      // Path is a gentle vertical S-curve: x sways slightly L/R as it descends.
+      function axonPoint(u) {
+        const y = AXON_START_Y + u * AXON_LEN;
+        const x = Math.sin(u * Math.PI * 1.4) * 10 + 2;
+        return { x, y, u };
+      }
+      const AXON_PTS = [];
+      for (let i = 0; i <= 40; i++) AXON_PTS.push(axonPoint(i / 40));
+
+      // Myelin segments — 6 capsules with small node gaps between
+      const MYELIN = [];
+      const N_MY = 6;
+      for (let i = 0; i < N_MY; i++) {
+        const pad = 0.025;
+        const u0 = (i / N_MY) + pad;
+        const u1 = ((i + 1) / N_MY) - pad;
+        MYELIN.push({ u0, u1 });
+      }
+      // Nodes of Ranvier (between segments)
+      const NODES = [];
+      for (let i = 1; i < N_MY; i++) NODES.push(i / N_MY);
+
+      // ─ TERMINAL ARBOR — fans DOWNWARD from the end of the axon
+      const TERM = AXON_PTS[AXON_PTS.length - 1];
+      const TERMS = [];
+      // 7 terminal branches fanning with much wider organic sweeping curves
+      const TBR = [
+        { ang: Math.PI * 0.08, len: 95, bend: -65 },
+        { ang: Math.PI * 0.22, len: 120, bend: -45 },
+        { ang: Math.PI * 0.36, len: 140, bend: -25 },
+        { ang: Math.PI * 0.50, len: 155, bend: (rand(9) - 0.5) * 15 }, // slight random wobble
+        { ang: Math.PI * 0.64, len: 140, bend: 25 },
+        { ang: Math.PI * 0.78, len: 120, bend: 45 },
+        { ang: Math.PI * 0.92, len: 95, bend: 65 }
+      ];
+      TBR.forEach((b, i) => {
+        const dirX = Math.cos(b.ang);
+        const dirY = Math.sin(b.ang);
+        const ex = TERM.x + dirX * b.len;
+        const ey = TERM.y + dirY * b.len;
+
+        // Create an organic flare by applying an orthogonal push to the control point
+        // plus a tiny bit of random organic variance.
+        const orthoX = -dirY;
+        const orthoY = dirX;
+        const varianceX = (rand(i * 1.7) - 0.5) * 10;
+        const varianceY = (rand(i * 2.3) - 0.5) * 10;
+
+        const cx_ = TERM.x + dirX * b.len * 0.55 + orthoX * b.bend + varianceX;
+        const cy_ = TERM.y + dirY * b.len * 0.55 + orthoY * b.bend + varianceY;
+
+        TERMS.push({ x: ex, y: ey, ang: b.ang, cx: cx_, cy: cy_ });
+      });
+
+      // Microtubules inside soma (short fibrous strokes)
+      const MTUBES = [];
+      for (let i = 0; i < 14; i++) {
+        const a = rand(i * 9.7) * Math.PI * 2;
+        const r1 = 14 + rand(i * 1.3) * 8, r2 = SOMA_R * 0.78 + rand(i * 4.7) * 4;
+        MTUBES.push({ a, r1, r2, ph: rand(i * 2.3) * Math.PI * 2 });
+      }
+
+      let t = 0, mx = 0, my = 0;
+      document.addEventListener('mousemove', e => {
+        const r = cnv.getBoundingClientRect();
+        mx = (e.clientX - r.left - W / 2) / W; my = (e.clientY - r.top - H / 2) / H;
+      });
+
+      let cachedACC = '0,212,184', cachedACC2 = '0,170,150';
+      let lastPalette = '';
+
+      function draw() {
+        if (isVisible) requestAnimationFrame(draw);
+        t += 0.005;
+        ctx.clearRect(0, 0, W, H);
+
+        const cs = getComputedStyle(document.documentElement);
+        cachedACC = (cs.getPropertyValue('--acc-rgb') || '0,212,184').trim();
+        cachedACC2 = (cs.getPropertyValue('--acc2-rgb') || '0,170,150').trim();
+
+        const ACC = cachedACC;
+        const ACC2 = cachedACC2;
+
+        // Use viewport dimensions instead of canvas dimensions so the oversized 
+        // canvas doesn't blow up the scale and push things out of bounds.
+        const vW = window.innerWidth;
+        const vH = window.innerHeight;
+        const SCALE = Math.min(vW, vH) / 640;
+        const cx = vW * 0.68 + mx * 8;
+        const cy = vH * 0.55 + my * 6;
+
+        // ─ ambient ECF (extracellular fluid) — sparse drifting points ─
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.scale(SCALE, SCALE);
+        for (let i = 0; i < 60; i++) {
+          const a = rand(i * 1.7) * Math.PI * 2 + t * (0.05 + rand(i * 2.1) * 0.04);
+          const r = 120 + rand(i * 3.3) * 220;
+          const x = Math.cos(a) * r, y = Math.sin(a) * r * 0.78;
+          ctx.fillStyle = `rgba(${ACC2},${(0.05 + rand(i * 7.7) * 0.08).toFixed(3)})`;
+          ctx.beginPath(); ctx.arc(x, y, 0.7 + rand(i * 5.1) * 1.1, 0, Math.PI * 2); ctx.fill();
+        }
+        ctx.restore();
+
+        // Soma rotates very slowly to feel alive
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.scale(SCALE, SCALE);
+        const breathe = 1 + Math.sin(t * 0.9) * 0.012;
+        ctx.scale(breathe, breathe);
+
+        // ─ DENDRITES (recursive arbors, more realistic volumetric look) ─
+        DENDRITES.forEach(d => {
+          // Pass 1: Outer translucent membrane
+          d.segs.forEach(s => {
+            const w = (s.depth + 1) * 1.8 + 1.2;
+            const op = 0.20 - s.depth * 0.03;
+            ctx.strokeStyle = `rgba(${ACC},${op.toFixed(3)})`;
+            ctx.lineWidth = w;
+            ctx.lineCap = 'round';
+            ctx.beginPath();
+            ctx.moveTo(s.x1, s.y1); ctx.quadraticCurveTo(s.cx, s.cy, s.x2, s.y2);
+            ctx.stroke();
+          });
+          // Pass 2: Inner axoplasm/cytoskeleton
+          d.segs.forEach(s => {
+            const w = (s.depth + 1) * 0.7 + 0.3;
+            const op = 0.65 - s.depth * 0.10;
+            ctx.strokeStyle = `rgba(${ACC2},${op.toFixed(3)})`;
+            ctx.lineWidth = w;
+            ctx.lineCap = 'round';
+            ctx.beginPath();
+            ctx.moveTo(s.x1, s.y1); ctx.quadraticCurveTo(s.cx, s.cy, s.x2, s.y2);
+            ctx.stroke();
+          });
+          // dendritic spines (mushroom shape)
+          d.segs.filter(s => s.depth === 0).forEach(s => {
+            const dx = s.x2 - s.x1, dy = s.y2 - s.y1, L = Math.hypot(dx, dy) || 1;
+            const nx = -dy / L, ny = dx / L;
+            const N = Math.max(2, Math.floor(L / 9));
+            for (let i = 1; i < N; i++) {
+              const u = i / N;
+              const px = s.x1 + (s.x2 - s.x1) * u, py = s.y1 + (s.y2 - s.y1) * u;
+              const side = (i % 2) ? 1 : -1;
+              const sl = 2.4 + rand(s.seed + i) * 2.0;
+              const ex = px + nx * side * sl, ey = py + ny * side * sl;
+              ctx.strokeStyle = `rgba(${ACC2},0.4)`;
+              ctx.lineWidth = 0.8;
+              ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(ex, ey); ctx.stroke();
+              // spine head (bouton)
+              ctx.fillStyle = `rgba(${ACC},0.5)`;
+              ctx.beginPath(); ctx.arc(ex, ey, 1.2, 0, Math.PI * 2); ctx.fill();
+            }
+          });
+        });
+
+        // ─ AXON with discrete myelin sheath capsules + Nodes of Ranvier ─
+        // Helper: position along axon by u 0..1
+        function axonAt(u) {
+          const i = Math.min(AXON_PTS.length - 1, Math.max(0, u * (AXON_PTS.length - 1)));
+          const i0 = Math.floor(i), i1 = Math.min(AXON_PTS.length - 1, i0 + 1);
+          const f = i - i0;
+          const a = AXON_PTS[i0], b = AXON_PTS[i1];
+          return { x: a.x + (b.x - a.x) * f, y: a.y + (b.y - a.y) * f };
+        }
+        function axonTangent(u) {
+          const e = 0.005;
+          const a = axonAt(Math.max(0, u - e)), b = axonAt(Math.min(1, u + e));
+          const dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy) || 1;
+          return { x: dx / L, y: dy / L };
+        }
+
+        // Thin axoplasmic core line (visible inside the gaps)
+        ctx.strokeStyle = `rgba(${ACC2},0.55)`;
+        ctx.lineWidth = 2.4;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        AXON_PTS.forEach((p, i) => { if (i === 0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y); });
+        ctx.stroke();
+
+        // Myelin capsules — segmented, 3D lipid sheath appearance
+        MYELIN.forEach((m, idx) => {
+          const pa = axonAt(m.u0), pb = axonAt(m.u1);
+          const mx2 = (pa.x + pb.x) / 2, my2 = (pa.y + pb.y) / 2;
+          const ang = Math.atan2(pb.y - pa.y, pb.x - pa.x);
+          const len = Math.hypot(pb.x - pa.x, pb.y - pa.y);
+          const mw = 13; // slightly thicker width for realism
+          ctx.save();
+          ctx.translate(mx2, my2);
+          ctx.rotate(ang);
+
+          // Outer sheath shadow
+          ctx.fillStyle = `rgba(0,0,0,0.12)`;
+          ctx.beginPath(); ctx.roundRect(-len * 0.5, -mw * 0.5 + 2, len, mw, 4); ctx.fill();
+
+          // capsule body
+          const grad = ctx.createLinearGradient(0, -mw * 0.5, 0, mw * 0.5);
+          grad.addColorStop(0, `rgba(${ACC},0.55)`);
+          grad.addColorStop(0.2, `rgba(${ACC},0.75)`); // specular reflection
+          grad.addColorStop(0.5, `rgba(${ACC2},0.40)`);
+          grad.addColorStop(0.8, `rgba(${ACC2},0.15)`);
+          grad.addColorStop(1, `rgba(${ACC},0.35)`); // rim bounce light
+          ctx.fillStyle = grad;
+          ctx.strokeStyle = `rgba(${ACC2},0.9)`;
+          ctx.lineWidth = 1.2;
+
+          ctx.beginPath();
+          ctx.roundRect(-len * 0.5, -mw * 0.5, len, mw, 5);
+          ctx.fill(); ctx.stroke();
+
+          // Inner wrapped layers (Clefts of Schmidt-Lanterman)
+          ctx.strokeStyle = `rgba(255,255,255,0.25)`;
+          ctx.lineWidth = 0.6;
+          ctx.beginPath();
+          ctx.moveTo(-len * 0.25, -mw * 0.4); ctx.lineTo(-len * 0.15, mw * 0.4);
+          ctx.moveTo(len * 0.25, -mw * 0.4); ctx.lineTo(len * 0.15, mw * 0.4);
+          ctx.stroke();
+
+          ctx.restore();
+        });
+
+        // ─ ELECTRIC SIGNAL travelling down the axon ─
+        // Saltatory: spike jumps along, with bright halo + glowing trail.
+        const sigU = (t * 1.50) % 1;
+        // Glowing trail: 8 fading dots behind the spike
+        for (let k = 8; k >= 1; k--) {
+          const u = sigU - k * 0.022;
+          if (u < 0) continue;
+          const p = axonAt(u);
+          const fade = (1 - k / 8);
+          ctx.fillStyle = `rgba(${ACC},${(fade * 0.18).toFixed(3)})`;
+          ctx.beginPath(); ctx.arc(p.x, p.y, 2 + fade * 4, 0, Math.PI * 2); ctx.fill();
+        }
+        // The spike itself — bright halo + crisp core
+        const spikeP = axonAt(sigU);
+        // outer halo
+        const haloR = 14;
+        const haloG = ctx.createRadialGradient(spikeP.x, spikeP.y, 0, spikeP.x, spikeP.y, haloR);
+        haloG.addColorStop(0, `rgba(${ACC},0.55)`);
+        haloG.addColorStop(0.5, `rgba(${ACC},0.20)`);
+        haloG.addColorStop(1, `rgba(${ACC},0)`);
+        ctx.fillStyle = haloG;
+        ctx.beginPath(); ctx.arc(spikeP.x, spikeP.y, haloR, 0, Math.PI * 2); ctx.fill();
+        // crisp core
+        ctx.fillStyle = `rgba(255,255,255,1)`;
+        ctx.beginPath(); ctx.arc(spikeP.x, spikeP.y, 2.2, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = `rgba(${ACC},1)`;
+        ctx.beginPath(); ctx.arc(spikeP.x, spikeP.y, 3.6, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = `rgba(255,255,255,0.95)`;
+        ctx.beginPath(); ctx.arc(spikeP.x, spikeP.y, 1.4, 0, Math.PI * 2); ctx.fill();
+
+        // Nodes of Ranvier flash brightly when the signal passes through
+        NODES.forEach(nu => {
+          const dist = Math.abs(((sigU - nu) + 1) % 1);
+          const near = Math.max(0, 1 - Math.min(dist, 1 - dist) / 0.05);
+          if (near > 0) {
+            const np = axonAt(nu);
+            const r = 6 + near * 6;
+            const g2 = ctx.createRadialGradient(np.x, np.y, 0, np.x, np.y, r);
+            g2.addColorStop(0, `rgba(${ACC},${(0.55 * near).toFixed(3)})`);
+            g2.addColorStop(1, `rgba(${ACC},0)`);
+            ctx.fillStyle = g2;
+            ctx.beginPath(); ctx.arc(np.x, np.y, r, 0, Math.PI * 2); ctx.fill();
+          }
+        });
+
+        // ─ TERMINAL ARBOR + synaptic boutons (fans downward) ─
+        TERMS.forEach((b, i) => {
+          // Pass 1: Outer translucent membrane
+          ctx.strokeStyle = `rgba(${ACC},0.35)`;
+          ctx.lineWidth = 4.0;
+          ctx.lineCap = 'round';
+          ctx.beginPath();
+          ctx.moveTo(TERM.x, TERM.y);
+          ctx.quadraticCurveTo(b.cx, b.cy, b.x, b.y);
+          ctx.stroke();
+
+          // Pass 2: Inner core
+          ctx.strokeStyle = `rgba(${ACC2},0.85)`;
+          ctx.lineWidth = 1.5;
+          ctx.lineCap = 'round';
+          ctx.beginPath();
+          ctx.moveTo(TERM.x, TERM.y);
+          ctx.quadraticCurveTo(b.cx, b.cy, b.x, b.y);
+          ctx.stroke();
+
+          // arriving signal at terminal — pulse boutons in sync with axon spike
+          const arrive = (sigU > 0.95) ? (1 - (1 - sigU) / 0.05) : 0;
+          const pls = 0.5 + 0.5 * Math.sin(t * 2.4 + i * 1.3);
+          const glow = arrive * 0.6 + pls * 0.18 + 0.20;
+
+          // Angle of the terminal branch end
+          const ang = Math.atan2(b.y - b.cy, b.x - b.cx);
+
+          ctx.save();
+          ctx.translate(b.x, b.y);
+          ctx.rotate(ang);
+
+          const bw = 3 + pls * 0.8 + arrive * 1.5; // width
+          const bl = 4.5 + pls * 1.2 + arrive * 2.0; // length
+
+          // Outer glow
+          ctx.fillStyle = `rgba(${ACC},${glow.toFixed(3)})`;
+          ctx.beginPath(); ctx.ellipse(bl * 0.5, 0, bl * 1.5, bw * 1.5, 0, 0, Math.PI * 2); ctx.fill();
+
+          // Organic bouton body (teardrop/mushroom)
+          ctx.fillStyle = `rgba(${ACC2},0.95)`;
+          ctx.beginPath();
+          ctx.moveTo(-1, -bw * 0.5);
+          ctx.quadraticCurveTo(bl * 1.1, -bw * 1.3, bl, 0);
+          ctx.quadraticCurveTo(bl * 1.1, bw * 1.3, -1, bw * 0.5);
+          ctx.closePath();
+          ctx.fill();
+
+          // Inner highlight
+          ctx.fillStyle = `rgba(255,255,255,0.85)`;
+          ctx.beginPath(); ctx.arc(bl * 0.5, -bw * 0.3, 0.8 + arrive * 0.5, 0, Math.PI * 2); ctx.fill();
+
+          ctx.restore();
+        });
+
+        // ─ SOMA — irregular blob via Catmull-Rom ─
+        function somaPath() {
+          const pts = SOMA_PATH, N = pts.length, tens = 0.5;
+          ctx.beginPath();
+          ctx.moveTo(pts[0].x, pts[0].y);
+          for (let i = 0; i < N; i++) {
+            const p0 = pts[(i - 1 + N) % N], p1 = pts[i], p2 = pts[(i + 1) % N], p3 = pts[(i + 2) % N];
+            const c1x = p1.x + (p2.x - p0.x) / 6 * tens * 2;
+            const c1y = p1.y + (p2.y - p0.y) / 6 * tens * 2;
+            const c2x = p2.x - (p3.x - p1.x) / 6 * tens * 2;
+            const c2y = p2.y - (p3.y - p1.y) / 6 * tens * 2;
+            ctx.bezierCurveTo(c1x, c1y, c2x, c2y, p2.x, p2.y);
+          }
+          ctx.closePath();
+        }
+        // Outer glow / membrane thickness
+        ctx.shadowColor = `rgba(${ACC},0.4)`;
+        ctx.shadowBlur = 15;
+        const somaGrad = ctx.createRadialGradient(-SOMA_R * 0.2, -SOMA_R * 0.3, SOMA_R * 0.1, 0, 0, SOMA_R * 1.1);
+        somaGrad.addColorStop(0, `rgba(${ACC},0.55)`);
+        somaGrad.addColorStop(0.4, `rgba(${ACC},0.35)`);
+        somaGrad.addColorStop(0.8, `rgba(${ACC2},0.20)`);
+        somaGrad.addColorStop(1, `rgba(${ACC2},0.45)`); // darker rim
+        ctx.fillStyle = somaGrad;
+        somaPath(); ctx.fill();
+        ctx.shadowBlur = 0; // reset
+
+        // Internal granular cytoplasm
+        ctx.save();
+        ctx.clip(); // clip to soma path
+        for (let i = 0; i < 90; i++) {
+          const ax = (rand(i * 3.1) - 0.5) * SOMA_R * 2.2;
+          const ay = (rand(i * 7.3) - 0.5) * SOMA_R * 2.2;
+          const ar = rand(i * 2.1) * 1.5 + 0.5;
+          ctx.fillStyle = `rgba(${ACC},${(rand(i * 4.1) * 0.20 + 0.05).toFixed(2)})`;
+          ctx.beginPath(); ctx.arc(ax, ay, ar, 0, Math.PI * 2); ctx.fill();
+        }
+        ctx.restore();
+
+        ctx.strokeStyle = `rgba(${ACC2},0.95)`;
+        ctx.lineWidth = 2.2;
+        somaPath(); ctx.stroke();
+        // inner highlight
+        ctx.strokeStyle = `rgba(255,255,255,0.25)`;
+        ctx.lineWidth = 1.2;
+        ctx.save(); ctx.translate(-1.5, -1.5); somaPath(); ctx.stroke(); ctx.restore();
+
+        // microtubules / cytoskeleton
+        MTUBES.forEach((m, i) => {
+          const op = 0.18 + 0.10 * Math.sin(t * 0.9 + m.ph);
+          ctx.strokeStyle = `rgba(${ACC2},${op.toFixed(3)})`;
+          ctx.lineWidth = 0.7;
+          ctx.beginPath();
+          ctx.moveTo(Math.cos(m.a) * m.r1, Math.sin(m.a) * m.r1);
+          ctx.lineTo(Math.cos(m.a) * m.r2, Math.sin(m.a) * m.r2);
+          ctx.stroke();
+        });
+
+        // mitochondria — bean shapes with inner cristae
+        for (let i = 0; i < 9; i++) {
+          const a = i * 0.9 + t * 0.05, r = SOMA_R * 0.6 + (i % 3) * 5;
+          const x = Math.cos(a) * r, y = Math.sin(a) * r;
+          ctx.save(); ctx.translate(x, y); ctx.rotate(a + i);
+          // bean shape
+          ctx.fillStyle = `rgba(${ACC2},0.65)`;
+          ctx.strokeStyle = `rgba(${ACC},0.8)`;
+          ctx.lineWidth = 0.8;
+          ctx.beginPath();
+          ctx.moveTo(-4, -1.5);
+          ctx.quadraticCurveTo(0, -3.5, 4, -1.5);
+          ctx.quadraticCurveTo(5.5, 0, 4, 1.5);
+          ctx.quadraticCurveTo(0, 0.5, -4, 1.5);
+          ctx.quadraticCurveTo(-5.5, 0, -4, -1.5);
+          ctx.fill(); ctx.stroke();
+          // cristae
+          ctx.strokeStyle = `rgba(255,255,255,0.4)`;
+          ctx.lineWidth = 0.6;
+          ctx.beginPath();
+          ctx.moveTo(-2, -1.5); ctx.lineTo(-1, 0.5);
+          ctx.moveTo(0, -1.5); ctx.lineTo(1, 0.5);
+          ctx.moveTo(2, -1.5); ctx.lineTo(3, 0.5);
+          ctx.stroke();
+          ctx.restore();
+        }
+
+        // ─ NUCLEUS with DNA helix inside ─
+        const NR = SOMA_R * 0.42;
+        // nuclear envelope - realistic 3D sphere shading
+        const nucGrad = ctx.createRadialGradient(-NR * 0.3, -NR * 0.3, NR * 0.1, 0, 0, NR);
+        nucGrad.addColorStop(0, `rgba(255,255,255,0.18)`); // specular reflection
+        nucGrad.addColorStop(0.3, `rgba(${ACC},0.45)`);
+        nucGrad.addColorStop(0.8, `rgba(${ACC2},0.30)`);
+        nucGrad.addColorStop(1, `rgba(${ACC2},0.7)`); // dark outer rim
+
+        ctx.shadowColor = `rgba(0,0,0,0.25)`;
+        ctx.shadowBlur = 10;
+        ctx.fillStyle = nucGrad;
+        ctx.beginPath(); ctx.arc(0, 0, NR, 0, Math.PI * 2); ctx.fill();
+        ctx.shadowBlur = 0;
+
+        // envelope double membrane
+        ctx.strokeStyle = `rgba(${ACC2},0.9)`;
+        ctx.lineWidth = 1.6;
+        ctx.beginPath(); ctx.arc(0, 0, NR, 0, Math.PI * 2); ctx.stroke();
+        ctx.strokeStyle = `rgba(255,255,255,0.25)`;
+        ctx.lineWidth = 0.8;
+        ctx.beginPath(); ctx.arc(0, 0, NR - 1.5, 0, Math.PI * 2); ctx.stroke();
+
+        // nuclear pores (clustered complexes)
+        for (let i = 0; i < 18; i++) {
+          const a = (i / 18) * Math.PI * 2 + t * 0.1;
+          const px = Math.cos(a) * NR, py = Math.sin(a) * NR;
+          ctx.fillStyle = `rgba(${ACC2},0.85)`;
+          ctx.beginPath(); ctx.arc(px, py, 1.5, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = `rgba(0,0,0,0.5)`;
+          ctx.beginPath(); ctx.arc(px, py, 0.7, 0, Math.PI * 2); ctx.fill();
+        }
+
+        // DNA double helix inside nucleus, rotating in 3D-ish
+        ctx.save();
+        // clip to nucleus circle
+        ctx.beginPath(); ctx.arc(0, 0, NR - 1, 0, Math.PI * 2); ctx.clip();
+        const hH = NR * 1.20;
+        const hW = NR * 0.40;
+        const turns = 2.6;
+        const rotZ = t * 0.25;
+        ctx.rotate(rotZ);
+        // two strands
+        const strandA = [], strandB = [];
+        for (let i = 0; i <= 70; i++) {
+          const u = i / 70;
+          const y = (u - 0.5) * hH;
+          const ph = u * Math.PI * 2 * turns + t * 1.6;
+          const xa = Math.cos(ph) * hW;
+          const xb = Math.cos(ph + Math.PI) * hW;
+          // depth 0..1 from cos so we can fade back strand
+          strandA.push({ x: xa, y, z: Math.sin(ph) });
+          strandB.push({ x: xb, y, z: Math.sin(ph + Math.PI) });
+        }
+        // rungs (base pairs) — skip when too narrow (perspective)
+        for (let i = 0; i < strandA.length; i += 2) {
+          const a = strandA[i], b = strandB[i];
+          const dz = (a.z + b.z) * 0.5;
+          const op = 0.35 + dz * 0.25; // brighter when forward
+          // colour rungs — alternate between two accent shades
+          const useAcc = (i % 4 === 0);
+          ctx.strokeStyle = useAcc ? `rgba(${ACC},${Math.max(0.15, op).toFixed(3)})` : `rgba(${ACC2},${Math.max(0.15, op).toFixed(3)})`;
+          ctx.lineWidth = 1.1;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+        // strand A (front when z>0)
+        function drawStrand(pts, baseAccent) {
+          ctx.lineCap = 'round';
+          for (let i = 0; i < pts.length - 1; i++) {
+            const p = pts[i], q = pts[i + 1];
+            const z = (p.z + q.z) * 0.5;
+            const op = 0.55 + z * 0.4;
+            const w = 1.6 + z * 1.0;
+            ctx.strokeStyle = baseAccent === 'A' ? `rgba(${ACC},${Math.max(0.15, op).toFixed(3)})` : `rgba(${ACC2},${Math.max(0.15, op).toFixed(3)})`;
+            ctx.lineWidth = Math.max(0.6, w);
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
+            ctx.stroke();
+          }
+        }
+        drawStrand(strandA, 'A');
+        drawStrand(strandB, 'B');
+        ctx.restore();
+
+        // nucleolus — small dense dot inside nucleus
+        ctx.fillStyle = `rgba(${ACC2},0.55)`;
+        ctx.beginPath(); ctx.arc(NR * 0.35, -NR * 0.30, NR * 0.16, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = `rgba(${ACC2},0.25)`;
+        ctx.beginPath(); ctx.arc(NR * 0.35, -NR * 0.30, NR * 0.22, 0, Math.PI * 2); ctx.fill();
+
+        ctx.restore();
+      }
+      draw();
+    })();
+
+    /* ══════════════════════════════════════════
+   MISSION VIZ — SOLID FLUORESCENCE GRADIENT
+   Ultra-dense, razor-thin outer cortical layer.
+   Butterfly-shaped connected Hippocampus.
+══════════════════════════════════════════ */
+    (function () {
+      const cnv = document.getElementById('vc');
+      if (!cnv) return;
+      const ctx = cnv.getContext('2d');
+      let W = 0, H = 0, DPR = Math.min(devicePixelRatio || 1, 2);
+      let isVisible = false;
+
+      const obs = new IntersectionObserver(entries => {
+        isVisible = entries[0].isIntersecting;
+        if (isVisible) draw();
+      }, { threshold: 0.05 });
+      obs.observe(cnv);
+
+      function rsz() {
+        const r = cnv.getBoundingClientRect();
+        W = r.width; H = r.height || 480;
+        cnv.width = W * DPR; cnv.height = H * DPR;
+        ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+      }
+      rsz(); window.addEventListener('resize', rsz);
+
+      let t = 0;
+      function getColors() {
+        const cs = getComputedStyle(document.documentElement);
+        return {
+          acc: (cs.getPropertyValue('--acc-rgb') || '0,212,184').trim(),
+          acc2: (cs.getPropertyValue('--acc2-rgb') || '0,170,150').trim()
+        };
+      }
+
+      const nodes = [];
+      const isMobile = window.innerWidth < 768;
+      const numNodes = isMobile ? 12000 : 40000;
+
+      for (let i = 0; i < (isMobile ? 60000 : 200000); i++) {
+        if (nodes.length >= numNodes) break;
+
+        let x = (Math.random() * 2 - 1);
+        let y = (Math.random() * 2 - 1);
+        let z = (Math.random() * 2 - 1) * 0.25;
+
+        let d = (x * x) / 1.3 + (y * y) / 0.85;
+        if (y > 0) d += (x * x * y * 1.1);
+
+        if (d <= 1) {
+          let absX = Math.abs(x);
+
+          // 1. Hippocampus Geometry (Butterfly Shape)
+          let isHippo = false;
+
+          // --- ADJUST THIS VALUE TO MOVE IT UP OR DOWN ---
+          // Increase value to move UP (e.g., 0.10, 0.15, 0.20)
+          // Decrease value to move DOWN
+          let moveUpAmount = 0.22;
+          let hippoY = y + moveUpAmount;
+          // -----------------------------------------------
+
+          let hX = absX - 0.34;
+          let hY = hippoY - 0.06;
+          let hR = Math.sqrt(hX * hX + hY * hY);
+
+          // Lateral wings (Outer curves)
+          if (hR > 0.07 && hR < 0.14 && hippoY > 0.0) isHippo = true;
+          // Inner wing curls
+          if (hR > 0.01 && hR < 0.04 && hippoY > 0.04) isHippo = true;
+
+          // Upper butterfly bridge sweeping from center out
+          let upperBridge = Math.abs(hippoY - (0.02 + absX * 0.15));
+          if (absX < 0.35 && upperBridge < 0.025) isHippo = true;
+
+          // Lower butterfly bridge sweeping in a V-shape
+          let lowerBridge = Math.abs(hippoY - (0.14 - absX * 0.25));
+          if (absX < 0.35 && lowerBridge < 0.035) isHippo = true;
+
+          // Solidify the center "body" of the butterfly
+          if (absX < 0.05 && hippoY > 0.02 && hippoY < 0.14) isHippo = true;
+
+          // 2. Midline fissure (Protect the butterfly bridge by only cutting non-hippo nodes)
+          if (!isHippo && absX < 0.04 && y < 0.15) continue;
+
+          // 3. Ventricles (Also protect the butterfly structure)
+          let isVentricle = false;
+          if (!isHippo && y > -0.25 && y < 0.05 && absX > 0.12 && absX < 0.45) {
+            if (Math.sqrt(Math.pow(absX - 0.28, 2) + Math.pow(y + 0.1, 2)) < 0.15) isVentricle = true;
+          }
+          if (isVentricle) continue;
+
+          // 4. Define the thin Outer Cortical Layer
+          let isOuterRim = (d > 0.88);
+
+          // 5. Ventral Base
+          let isVentral = (y > 0.75 && absX < 0.18);
+
+          // ALLOCATE DENSITY AND STYLES
+          let type = 2;
+          let size = Math.random() * 1.0 + 0.5;
+          let opacityMod = 0.8;
+
+          if (isHippo) {
+            type = 4;
+            size = Math.random() * 0.8 + 0.4;
+            opacityMod = 1.8;
+          } else if (isOuterRim) {
+            type = 1;
+            size = Math.random() * 0.7 + 0.3;
+            opacityMod = 1.6;
+          } else if (isVentral) {
+            type = 5;
+            size += 0.5;
+            opacityMod = 1.5;
+          } else {
+            // Drop 60% of deep tissue to pack the rim
+            if (Math.random() > 0.40) continue;
+            opacityMod = 0.6;
+          }
+
+          nodes.push({
+            origX: x, origY: y, origZ: z,
+            origD: d,
+            type: type, size: size, op: opacityMod,
+            pulseOffset: Math.random() * Math.PI * 2
+          });
+        }
+      }
+
+      function draw() {
+        if (isVisible) requestAnimationFrame(draw);
+        t += 0.005;
+        ctx.clearRect(0, 0, W, H);
+
+        const colors = getColors();
+        const cx = W / 2;
+        const cy = H / 2;
+        const scale = Math.min(W, H) * 0.42;
+
+        const angle = t;
+        const sinA = Math.sin(angle);
+        const cosA = Math.cos(angle);
+        const tilt = -0.10;
+        const sinT = Math.sin(tilt);
+        const cosT = Math.cos(tilt);
+
+        const projected = nodes.map(n => {
+          let rX = n.origX * cosA - n.origZ * sinA;
+          let rZ = n.origX * sinA + n.origZ * cosA;
+          let rY = n.origY;
+          let tY = rY * cosT - rZ * sinT;
+          let tZ = rY * sinT + rZ * cosT;
+          return { x: rX * scale, y: tY * scale, z: tZ * scale, n: n };
+        });
+
+        projected.sort((a, b) => a.z - b.z);
+
+        ctx.save();
+        ctx.translate(cx, cy);
+
+        ctx.globalCompositeOperation = 'screen';
+
+        projected.forEach(p => {
+          let depth = p.z / scale;
+          let baseOpacity = (0.3 + depth * 0.4) * p.n.op;
+          if (baseOpacity < 0.05) baseOpacity = 0.05;
+
+          baseOpacity = Math.min(0.75, baseOpacity);
+
+          let fillStyle = '';
+
+          if (p.n.type === 1) {
+            fillStyle = `rgba(${colors.acc2}, ${(baseOpacity).toFixed(3)})`;
+          } else if (p.n.type === 4) {
+            fillStyle = `rgba(${colors.acc}, ${baseOpacity.toFixed(3)})`;
+          } else if (p.n.type === 5) {
+            fillStyle = `rgba(255, 255, 255, ${(baseOpacity + 0.1).toFixed(3)})`;
+          } else {
+            if (p.n.origD > 0.40) {
+              fillStyle = `rgba(${colors.acc}, ${(baseOpacity * 0.85).toFixed(3)})`;
+            } else {
+              fillStyle = `rgba(${colors.acc}, ${(baseOpacity * 0.55).toFixed(3)})`;
+            }
+          }
+
+          const scanPulse = Math.sin(p.n.origX * 12 - t * 15 + p.n.pulseOffset);
+          let finalSize = p.n.size;
+
+          if (scanPulse > 0.95 && depth > -0.2) {
+            finalSize *= 1.8;
+            if (p.n.type === 4) {
+              fillStyle = `rgba(${colors.acc}, 0.95)`;
+            } else if (p.n.type === 1) {
+              fillStyle = `rgba(${colors.acc2}, 0.95)`;
+            }
+          }
+
+          ctx.fillStyle = fillStyle;
+          ctx.fillRect(p.x - finalSize / 2, p.y - finalSize / 2, finalSize, finalSize);
+        });
+
+        ctx.restore();
+      }
+      draw();
+    })();
+  </script>
+
+  <script>
+    (function () {
+      // ── Theme Logic ──
+      const html = document.documentElement;
+      const toggle = document.getElementById('theme-toggle');
+      
+      function setTheme(theme) {
+        if (theme === 'dark') html.setAttribute('data-theme', 'dark');
+        else html.removeAttribute('data-theme');
+        localStorage.setItem('dnaxon-theme', theme);
+      }
+
+      const savedTheme = localStorage.getItem('dnaxon-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      setTheme(savedTheme);
+
+      toggle.addEventListener('click', () => {
+        const isDark = html.getAttribute('data-theme') === 'dark';
+        setTheme(isDark ? 'light' : 'dark');
+      });
+
+      // ── Tweak Logic ──
+      const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+        "voice": "manuscript",
+        "heroMode": "atlas"
+      }/*EDITMODE-END*/;
+      let state = Object.assign({}, TWEAK_DEFAULTS);
+      function apply() {
+        const r = document.documentElement;
+        r.dataset.voice = state.voice;
+        r.dataset.hero = state.heroMode;
+        document.querySelectorAll('#twk .row').forEach(row => {
+          const k = row.dataset.key;
+          const v = state[k];
+          if(!k) return;
+          row.querySelectorAll('.opt').forEach(b => {
+            b.classList.toggle('act', b.dataset.v === v);
+          });
+        });
+      }
+      apply();
+
+      document.querySelectorAll('#twk .opt').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const row = btn.closest('.row');
+          if(!row) return;
+          const k = row.dataset.key;
+          const v = btn.dataset.v;
+          if (state[k] === v) return;
+          state[k] = v; apply();
+          try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [k]: v } }, '*'); } catch (e) { }
+        });
+      });
+
+      const panel = document.getElementById('twk');
+      function show() { if(panel) panel.classList.add('on'); }
+      function hide() {
+        if(panel) panel.classList.remove('on');
+        try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) { }
+      }
+      const closeBtn = document.getElementById('twkX');
+      if(closeBtn) closeBtn.addEventListener('click', hide);
+
+      window.addEventListener('message', (e) => {
+        const d = e.data || {};
+        if (d.type === '__activate_edit_mode') show();
+        else if (d.type === '__deactivate_edit_mode') hide();
+      });
+      try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (e) { }
+    })();
+  </script>
+
+
+
+  <script>
+    /* ── Logo neural canvas ── */
+    (function () {
+      const c = document.getElementById('logo-canvas');
+      if (!c) return;
+      const ctx = c.getContext('2d');
+      const SIZE = 44;
+      let isVisible = true; // Header is mostly visible, but we check anyway
+
+      /* High-DPI sharpness fix: 2x supersampling only on desktop for power saving */
+      const isMobile = window.innerWidth < 768;
+      const dpr = isMobile ? (window.devicePixelRatio || 1) : (window.devicePixelRatio || 1) * 2;
+      
+      c.width = SIZE * dpr;
+      c.height = SIZE * dpr;
+      c.style.width = SIZE + 'px';
+      c.style.height = SIZE + 'px';
+      ctx.scale(dpr, dpr);
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+
+      const obs = new IntersectionObserver(entries => {
+        isVisible = entries[0].isIntersecting;
+        if (isVisible) draw();
+      }, { threshold: 0 });
+      obs.observe(c);
+
+      const W = SIZE, H = SIZE;
+      const TEAL = '#00d4b8';
+
+      /* circular boundary radius — keeps nodes inside the circle clip */
+      const CX = W / 2, CY = H / 2, CLAMP = W / 2 - 5;
+
+      const nodes = [
+        { x: 22, y: 22, vx: 0.12, vy: -0.08, r: 3.8 },
+        { x: 14, y: 14, vx: -0.09, vy: 0.11, r: 2.8 },
+        { x: 32, y: 12, vx: 0.08, vy: 0.09, r: 2.6 },
+        { x: 10, y: 30, vx: 0.10, vy: -0.12, r: 2.6 },
+        { x: 34, y: 32, vx: -0.11, vy: -0.08, r: 2.8 },
+        { x: 22, y: 8, vx: -0.08, vy: 0.10, r: 2.2 },
+        { x: 22, y: 36, vx: 0.09, vy: -0.09, r: 2.2 },
+      ];
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+
+        /* connection lines — strong opacity */
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x;
+            const dy = nodes[i].y - nodes[j].y;
+            const d = Math.sqrt(dx * dx + dy * dy);
+            if (d < 26) {
+              const alpha = (1 - d / 26) * 1.0;
+              ctx.beginPath();
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+              ctx.strokeStyle = 'rgba(0,212,184,' + alpha + ')';
+              ctx.lineWidth = 1.5;
+              ctx.stroke();
+            }
+          }
+        }
+
+        /* nodes */
+        nodes.forEach(n => {
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+          ctx.fillStyle = TEAL;
+          ctx.globalAlpha = 1;
+          ctx.fill();
+        });
+
+        /* move + circular boundary */
+        nodes.forEach(n => {
+          n.x += n.vx;
+          n.y += n.vy;
+          const dx = n.x - CX;
+          const dy = n.y - CY;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const limit = CLAMP - n.r;
+          if (dist > limit) {
+            /* reflect velocity off the circle wall */
+            const nx = dx / dist, ny = dy / dist;
+            const dot = n.vx * nx + n.vy * ny;
+            n.vx -= 2 * dot * nx;
+            n.vy -= 2 * dot * ny;
+            /* push node back inside */
+            n.x = CX + nx * limit;
+            n.y = CY + ny * limit;
+          }
+        });
+
+        requestAnimationFrame(draw);
+      }
+      // Initial call removed, handled by observer
+    })();
+  </script>
+
+</body>
+
+</html>

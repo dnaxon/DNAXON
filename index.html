@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DNAxon Biosciences — Neurogenomics AI Drug Discovery</title>
   <meta name="description"
-    content="DNAxon is building the brain-specific AI platform for neurogenomic drug discovery. Decoding the genetics of brain disease.">
+    content="DNAxon is building the world's first brain-specific AI platform for neurogenomic drug discovery. Decoding the genetics of brain disease.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -528,9 +528,17 @@
     }
 
     /* ── Cursor ── */
-    @media (pointer: coarse), (max-width: 1024px) {
-      #cur, #cr { display: none !important; }
-      * { cursor: auto !important; }
+    @media (pointer: coarse),
+    (max-width: 1024px) {
+
+      #cur,
+      #cr {
+        display: none !important;
+      }
+
+      * {
+        cursor: auto !important;
+      }
     }
 
     #cur,
@@ -624,10 +632,21 @@
       transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    html[data-theme="dark"] .tt svg.sun { display: block; }
-    html[data-theme="dark"] .tt svg.moon { display: none; }
-    html:not([data-theme="dark"]) .tt svg.sun { display: none; }
-    html:not([data-theme="dark"]) .tt svg.moon { display: block; }
+    html[data-theme="dark"] .tt svg.sun {
+      display: block;
+    }
+
+    html[data-theme="dark"] .tt svg.moon {
+      display: none;
+    }
+
+    html:not([data-theme="dark"]) .tt svg.sun {
+      display: none;
+    }
+
+    html:not([data-theme="dark"]) .tt svg.moon {
+      display: block;
+    }
 
     html[data-theme="dark"] .tt:hover svg {
       transform: rotate(45deg);
@@ -1819,8 +1838,22 @@
         <li><a href="#ct" class="nb">Contact</a></li>
       </ul>
       <button id="theme-toggle" class="tt" title="Toggle Theme" aria-label="Toggle Theme">
-        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
       </button>
     </div>
   </nav>
@@ -1843,7 +1876,11 @@
         <!--<span class="ln">We built the AI to read them</span>-->
       </h1>
       <div class="hrule"></div>
-      <p class="hs" align="justify">Conventional drug testing treats the brain as a uniform system, ignoring its distinct cellular neighborhoods, spatial architectures, and localized disease signatures. DNAxon integrates single-cell and spatial multi-omics to build a dedicated spatial AI engine for neuropharmacology. By simulating how drugs interact with human brain tissue at the single-cell level, we forecast clinical efficacy, map off-target toxicity, and pinpoint responder subgroups years before a trial begins.</p>
+      <p class="hs" align="justify">Conventional drug testing treats the brain as a uniform system, ignoring its
+        distinct cellular neighbourhoods, spatial architectures, and localised disease signatures. DNAxon integrates
+        single-cell and spatial multi-omics to build a dedicated spatial AI engine for neuropharmacology. By predicting
+        how drugs interact with human brain tissue at the single-cell level, we forecast clinical efficacy, map
+        off-target neurotoxicity, and identify responder subgroups before a single patient is dosed.</p>
       <div class="ha">
         <a href="#inv" class="bp"> Partner with Us</a>
         <a href="#mission" class="bg">Read the Mission</a>
@@ -1859,12 +1896,12 @@
       <div class="mg">
         <div class="mt rv">
           <div class="sl2">Mission</div>
-          <h2 class="st">Equipping the next era of neuropharmacology</h2>
+          <h2 class="st">The next era of neuropharmacology</h2>
           <p>Developing CNS therapies is one of the most complex challenges in modern medicine, historically limited by
-            the inability to track drug interactions within the brain's physical architecture. Our mission is to equip
-            researchers with the missing layer of spatial intelligence. By illuminating the exact cellular coordinates
-            of disease, we empower R&D teams to validate targets, predict safety, and advance clinical pipelines with
-            unprecedented visibility and confidence.</p>
+            the inability to track drug interactions within the brain's physical architecture. Our mission is to unlock
+            the missing layer of spatial intelligence. By illuminating the exact cellular coordinates of disease, we
+            de-risk partner assets and drive our own proprietary target discovery with unprecedented visibility and
+            confidence.</p>
           <p><strong>What traditionally takes over a decade of trial and error can now be mapped and de-risked in a
               fraction of the time.</strong></p>
 
@@ -1908,11 +1945,12 @@
               <path
                 d="M10 3c0 2.2-1.8 4-4 4s-4-1.8-4-4M14 21c0-2.2 1.8-4 4-4s4 1.8 4 4M18 7c0 2.2-1.8 4-4 4s-4-1.8-4-4M6 17c0-2.2 1.8-4 4-4s4 1.8 4 4M14 7l-8 10M6 7l8 10" />
             </svg></div>
-          <h3>Neurogenomics Foundation Model</h3>
-          <p align="justify">A foundation model trained on human brain genomic data from CELLxGENE, the Human Cell Atlas
-            and ROSMAP —
-            learning the shared and divergent genetic signatures of neurological disease across cell types, cohorts and
-            disease states simultaneously.</p>
+          <h3>Neurogenomics Intelligence Engine</h3>
+          <p align="justify">A brain-dedicated intelligence layer built on human single-cell multi-omic data — learning
+            the shared and divergent molecular signatures of neurological disease across cell types, brain regions and
+            disease states. Anchored in human neurobiology, it features a cross-species translation module that
+            identifies which preclinical signals survive the animal-to-human transition — targeting the gap responsible
+            for 92% of CNS trial failures.</p>
         </div>
         <div class="pl rv" style="transition-delay:.18s">
           <div class="pn">02 / Spatial Biology</div>
@@ -3138,7 +3176,7 @@
       // ── Theme Logic ──
       const html = document.documentElement;
       const toggle = document.getElementById('theme-toggle');
-      
+
       function setTheme(theme) {
         if (theme === 'dark') html.setAttribute('data-theme', 'dark');
         else html.removeAttribute('data-theme');
@@ -3166,7 +3204,7 @@
         document.querySelectorAll('#twk .row').forEach(row => {
           const k = row.dataset.key;
           const v = state[k];
-          if(!k) return;
+          if (!k) return;
           row.querySelectorAll('.opt').forEach(b => {
             b.classList.toggle('act', b.dataset.v === v);
           });
@@ -3177,7 +3215,7 @@
       document.querySelectorAll('#twk .opt').forEach(btn => {
         btn.addEventListener('click', () => {
           const row = btn.closest('.row');
-          if(!row) return;
+          if (!row) return;
           const k = row.dataset.key;
           const v = btn.dataset.v;
           if (state[k] === v) return;
@@ -3187,13 +3225,13 @@
       });
 
       const panel = document.getElementById('twk');
-      function show() { if(panel) panel.classList.add('on'); }
+      function show() { if (panel) panel.classList.add('on'); }
       function hide() {
-        if(panel) panel.classList.remove('on');
+        if (panel) panel.classList.remove('on');
         try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) { }
       }
       const closeBtn = document.getElementById('twkX');
-      if(closeBtn) closeBtn.addEventListener('click', hide);
+      if (closeBtn) closeBtn.addEventListener('click', hide);
 
       window.addEventListener('message', (e) => {
         const d = e.data || {};
@@ -3218,7 +3256,7 @@
       /* High-DPI sharpness fix: 2x supersampling only on desktop for power saving */
       const isMobile = window.innerWidth < 768;
       const dpr = isMobile ? (window.devicePixelRatio || 1) : (window.devicePixelRatio || 1) * 2;
-      
+
       c.width = SIZE * dpr;
       c.height = SIZE * dpr;
       c.style.width = SIZE + 'px';
